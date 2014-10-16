@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<!-- 0 ~ 3 single load -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->
+<!-- 4 single load
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script> -->
+
+<script>
+// 1. no-option, jQuery변수명으로 함수 할당 가능.
+//$.noConflict();
+
+// 2. no-option + random variable, 임의의 변수명으로 할당 가능.
+//var randomVariable = $.noConflict();
+
+// 3. option, 전역변수의 프로퍼티로 저장된 jQuery 변수명도 할당하지 않음.
+// 에러 발생 : Uncaught TypeError: Cannot read property 'noConflict' of undefined 
+//$.noConflict(true);
+
+// 4. option + random variable, 가장 최근에 로딩된 제이쿼리 파일부터 적용되고, 임의의 변수명을으로 할당 가능.
+//var jq62 = $.noConflict(true);
+//var jq102 = $.noConflict(true);
+//var jq112 = $.noConflict(true);
+
+// 0. normal
+$(document).ready(function() {
+//$(function() {
+
+// 1. no-option, jQuery변수명으로 함수 할당 가능. + 내부에서 $변수로 할당 가능. 외부는 jQuery 변수명으로 사용함.
+//jQuery(function( $ ) {
+
+// 2. no-option + random variable, 임의의 변수명으로 할당 가능.
+//randomVariable(function( $ ) {
+
+//3. option, 전역변수의 프로퍼티로 저장된 jQuery 변수명도 할당하지 않음.
+//jQuery(function( $ ) {
+
+// 4. option + random variable, 가장 최근에 로딩된 제이쿼리 파일부터 적용되고, 임의의 변수명을으로 할당 가능.
+//jq62(function( $ ) {
+//jq102(function( $ ) {
+//jq112(function( $ ) {
+	
+	// 0 ~ 4, 제이쿼리 버전 확인
+	resultText('jQuery(제이쿼리) 버전 : ' + $.fn.jquery);
+});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

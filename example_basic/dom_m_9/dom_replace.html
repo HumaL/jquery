@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+.wrap div {position:relative; width:50px; height:50px; outline:1px solid #eee}
+.refresh {background:black}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->
+	<div class="wrap">
+		<div class="replace"></div>
+		<div class="replace"></div>
+	</div>
+	
+<script>
+	// dom_replace method
+	//$('.replace').replaceWith('<div class="refresh"/>');
+	//$('<div class="refresh"/>').replaceAll('.replace');
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

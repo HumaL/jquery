@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->	
+	<button type="button">click 이벤트 테스트하기</button>
+	<button type="button">click 이벤트 테스트하기</button>
+
+<script>
+	// 1. bind
+	//var clickNumber = 0;
+	//$('button').bind('click', function() {
+	//	clickNumber++;
+	//	resultText('버튼을 클릭했습니다. : ' + clickNumber + '회');
+	//});
+	
+	// 2. unbind
+	//$('button').unbind();
+	//$('button').unbind('click');
+	
+	// 3. delegate
+	//var clickNumber = 0;
+	//$(document).delegate('button', 'click', function( event ) {
+	//	clickNumber++;
+	//	resultText('버튼을 클릭했습니다. : ' + clickNumber + '회');
+	//});
+	
+	// 4. undelegate
+	//$(document).undelegate();
+	//$(document).undelegate('button', 'click');
+	
+	// 5-1. on_normal, parameter
+	//var clickNumber = 0;
+	//$('button').on('click', function() {
+	//	clickNumber++;
+	//	resultText('버튼을 클릭했습니다. : ' + clickNumber + '회');
+	//});
+	
+	// 5-2. on_normal, object
+	//var clickNumber = 0;
+	//$('button').on({
+	//	click : function() {
+	//		clickNumber++;
+	//		resultText('버튼을 클릭했습니다. : ' + clickNumber + '회');
+	//	}
+	//});
+	
+	// 5-3. on_delegate,
+	//var clickNumber = 0;
+	//$(document).on('click', 'button', function() {
+	//	clickNumber++;
+	//	resultText('버튼을 클릭했습니다. : ' + clickNumber + '회');
+	//});
+	
+	// 6-1. off_normal
+	//$('button').off();
+	//$('button').off('click');
+	
+	// 6-2. off_delegate
+	//$(document).off();
+	//$(document).off('click', 'button');
+
+	// 7-0. trigger, shortcut method
+	//$('button').click(function() {
+	//	alert('버튼을 클릭했습니다');
+	//});
+	
+	// 7-1. trigger
+	//$('button').trigger('click');
+	//resultText('.trigger()메서드로 호출하면 이벤트가 등록된 객체의 개수에 따라 함수를 여러번 호출합니다.');
+	
+	// 7-2. triggerHandler
+	//$('button').triggerHandler('click');
+	//resultText('.triggerHandler()메서드로 호출하면 마지막 실행된 이벤트 핸들러 함수를 한 번만 호출합니다.');
+	
+	// 8. one
+	//var clickNumber = 0;
+	//$('button').one('click', function() {
+	//	clickNumber++;
+	//	resultText('버튼을 클릭했습니다. : ' + clickNumber + '회 [.one()메서드는 한 번만 발생합니다.]');
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

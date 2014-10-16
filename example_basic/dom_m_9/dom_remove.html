@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+	
+<!-- 실습 영역 -->
+	<!-- 1-1. attr_remove
+	<span id="아이디_최초" class="클래스_최초" style="display:block; position:relative; top:30px; left:30px; width:200px; height:100px; background:#000"></span> -->
+	
+	<!-- 1-2. attr_remove + prop_remove
+	<input type="radio" checked="checked"> -->	
+	
+	
+	<!-- 2-1. element_remove
+	<span id="outer" style="display:inline-block; position:relative; top:30px; left:30px; width:200px; height:100px; background:#eee">
+		<span id="inner" style="display:block; position:absolute; top:30px; left:30px; width:100%; height:100%; background:#000"></span>
+	</span> -->
+	
+	<!-- 2-2-1. 2-2-2. element_remove_event
+	<button>삽입 / 삭제 이벤트 토글하기</button>
+	<span id="outer" style="display:inline-block; position:relative; top:30px; left:30px; width:200px; height:100px; background:#eee">
+		<span id="inner" style="display:block; position:absolute; top:30px; left:30px; width:100%; height:100%; background:#000"></span>
+	</span> -->
+	
+<script>
+	// 1-1. attr_remove
+	//$('span').removeAttr('id');
+	
+	//resultText( $('span').attr('id') );
+	//resultText( $('span').attr('class') );
+	//resultText( $('span').attr('style') );
+	
+	// 1-2. attr_remove + prop_remove
+	//$('input').removeAttr('checked');
+	//$('input').removeProp('checked');
+	
+	//resultText( $('input').attr('checked') );
+	//resultText( $('input').prop('checked') );	
+	
+	
+	// 2-1. element_remove
+	//$('#outer').empty();
+	//$('#outer').remove();
+	//$('#outer').detach();
+	//$('#inner').unwrap();
+	
+	// 2-2-1. element_remove_event : remove
+	//var $inner;
+	//$('button').click(function() {
+	//	if( !$('button').hasClass('addClass') ) {
+	//		$inner = $('#inner');
+	//		$('#inner').remove();
+	//		$('button').addClass('addClass');
+	//	} else {
+	//		$('#outer').append( $inner );
+	//		$('button').removeClass('addClass');
+	//	}
+	//});
+	//
+	//$('#inner').click(function() {
+	//	alert('#inner 클릭했습니다.');
+	//});
+	
+	// 2-2-2. element_remove_event : detach
+	//var $inner;
+	//$('button').click(function() {
+	//	if( !$('button').hasClass('addClass') ) {
+	//		$inner = $('#inner');
+	//		$('#inner').detach();
+	//		$('button').addClass('addClass');
+	//	} else {
+	//		$('#outer').append( $inner );
+	//		$('button').removeClass('addClass');
+	//	}
+	//});
+	//
+	//$('#inner').click(function() {
+	//	alert('#inner 클릭했습니다.');
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

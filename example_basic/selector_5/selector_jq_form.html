@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+input, select, button {display:block; margin:10px}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->
+	<input type="button" value="input, :button">
+	<input type="checkbox">
+	<input type="checkbox" checked>
+	<input type="radio">
+	<input type="radio" checked>
+	<input type="file">
+	<input type="image" src="../../chrome.png">
+	<input type="password" value="input, :password">
+	<input type="text" value="input, :text">
+	<input type="text" value="input, :disabled" disabled>
+	<select>
+		<option selected>가</option>
+		<option>나</option>
+	</select>
+	<button type="reset">button, :reset</button>
+	<button type="submit">button, :submit</button>
+	
+<script>
+	// 1. :button
+	//resultSelector( $(':button') );
+	
+	// 2. :checkbox
+	//resultSelector( $(':checkbox') );
+	
+	// 3. :checked
+	//resultSelector( $(':checked') );
+	
+	// 4. :disabled
+	//resultSelector( $(':disabled') );
+	
+	// 5. :enabled
+	//resultSelector( $(':enabled') );
+	
+	// 6. :file
+	//resultSelector( $(':file') );
+	
+	// 7. :image
+	//resultSelector( $(':image') );
+	
+	// 8. :input
+	//resultSelector( $(':input') );
+	
+	// 9. :password
+	//resultSelector( $(':password') );
+	
+	// 10. :radio
+	//resultSelector( $(':radio') );
+	
+	// 11. :reset
+	//resultSelector( $(':reset') );
+	
+	// 12. :submit
+	//resultSelector( $(':submit') );
+	
+	// 13. :text
+	//resultSelector( $(':text') );
+	
+	// 14. :selected
+	//resultSelector( $(':selected') );
+	
+	// 15. :focus
+	//$('input').click(function() {
+	//	resultSelector( $(':focus') );
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+.data {margin:20px; padding:20px; background:#eee}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+	
+<!-- 실습 영역 -->	
+	<div class="data"></div>
+	<div class="data"></div>
+	<div class="data"></div>
+	<div class="data"></div>
+	<div class="data"></div>
+
+<script>
+	// 1-1. setter data, example value 'String'
+	//$('.data').data('name', 'testName:String');
+	
+	// 1-2. setter data, example value 'Object'
+	//$('.data').data({ 'name' : 'testName:Object' });
+	
+	// 1-3. setter data + if) index == 0 : remove data, multi
+	//$('.data').each(function( index ) {
+	//	$(this).data('index', index);
+	//	if( index == 0 ) $(this).removeData('index');
+	//});
+	
+	// 1-4. setter data, event
+	//$('.data').each(function( index ) {
+	//	$(this).on('click', { 'name' : 'testName:Event ' + index }, function( event ) {
+	//		resultText( event.data.name );
+	//	});
+	//});
+	
+	// 2. getter data, example value 'String'
+	//resultText( $('.data').data('name') );
+	
+	// 3. remove data, selected key
+	//$('.data').removeData('name');
+	
+	// 3-2. remove data, all
+	//$('.data').removeData();
+	
+	// 4. 1-3과 pair : $.hasData(), (주의사항) 타겟 엘리먼트(Target Element)를 정확하게 지정해주어야 한다.
+	//resultText( $.hasData( $('.data')[0]) );
+	//resultText( $.hasData( $('.data')[1]) );
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

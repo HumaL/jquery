@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->	
+	<!-- 3. focusin & focusout
+	<input type="text"> -->
+
+<script>
+	//http://quirksmode.co.kr/20195773056
+	
+	// 1. keydown & keyup : 기능키나 특수한 키보드 입력을 해야할 때에 사용합니다.
+	//$(document).keydown(function() {
+	//	resultText('키보드 키를 임의로 누르고 있습니다.');
+	//}).keyup(function() {
+	//	resultText('누르고 있던 키에서 손가락을 뗏습니다.');
+	//});
+	
+	// 2. keypress
+	//$(document).keypress(function() {
+	//	resultText('키보드 키를 임의로 누르고 있습니다.');
+	//});
+	
+	// 3. focusin & focusout
+	//$('input').focusin(function() {
+	//	resultText('포커스가 해당 요소에 표시되어 있습니다.');
+	//}).focusout(function() {
+	//	resultText('포커스가 빠져나갔습니다.');
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

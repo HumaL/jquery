@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+input {display:block; margin:10px}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->
+	<input type="text" class="class-first" value="[class]" disabled>
+	<input type="text" class="nameValue" value="[class=nameValue]" disabled>
+	<input type="text" class="multi" value="[class=multi][id=group1]" disabled id="group1">
+	<input type="text" class="startWord_kr class" value="[class^=startWord]" disabled>
+	<input type="text" class="name_endWord" value="[class$=endWord]" disabled>
+	<input type="text" class="isValue" value="[class*=isValue]" disabled>
+	<input type="text" class="class includeWords" value="[class~=class]" disabled>
+	<input type="text" class="not" value="[name!=not]" disabled id="group2">
+	<input type="text" class="class-name" value="[name|=class-name]" disabled>
+	
+	
+<script>
+	// 1. [name] : 속성 표현식
+	//resultSelector( $('input[class]') );
+	
+	// 2. [name=value] : 속성값 표현식
+	//resultSelector( $('input[class=nameValue]') );
+	//resultSelector( $('input[class=isValue]'), 'orange' );
+	
+	// 3. [name=value][name2=value2] : 그룹 속성값 표현식
+	//resultSelector( $('input[class=multi][id=group1]') );
+	//resultSelector( $('input[class=not][id=group2]'), 'orange' );
+	
+	// 4. [name^=value] : 속성값이 시작 단어에 일치
+	//resultSelector( $('[class^=start]') );
+	//resultSelector( $('[class^=name]'), 'orange' );
+	
+	// 5. [name$=value] : 속성값이 종료 단어에 일치
+	//resultSelector( $('[class$=Value]') );
+	//resultSelector( $('[class$=Word]'), 'orange' );
+	
+	// 6. [name *= value] : 속성값 포함 여부 표현식
+	//resultSelector( $('[class*=Val]') );
+	//resultSelector( $('[class*=kr]'), 'orange' );
+	
+	// 7. [name ~= value] : 단어를 포함하는 속성 표현식
+	//resultSelector( $('[class~=class]') );
+	
+	// 8. [name != value] : 값이 일치하지 않는 속성
+	//resultSelector( $('input[class!=not]') );
+	
+	// 9. [name |= value] : 머리글(prefix)을 포함하는 속성 표현식
+	//resultSelector( $('[class|=class]') );
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

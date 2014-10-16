@@ -1,0 +1,10 @@
+﻿body {margin:0}
+img {border:0}
+li {list-style:none}
+
+
+.result {position:fixed; bottom:0; width:100%; padding:10px; border-top:1px solid #aaa; background:#efefef}
+.result .title {font-size:1.5em; font-weight:bold}
+.result .description {padding:10px 0}
+
+.result_html {display:none}

@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+	
+<!-- 실습 영역 -->	
+	<!-- 1 ~ 2, queue & dequeue, clearQueue -->
+	<button type="button">애니메이션 적용 테스트</button>
+	<span style="display:block; position:absolute; top:50px; left:0; width:100px; height:100px; background:#000"></span>
+	
+<script>
+	// 1. queue & dequeue
+	//$('button').click(function() {
+	//	if( !$('button').hasClass('action') ) {
+	//		$('span').animate({ left : $(window).width() - 100 });
+	//		$('span').queue(function() {
+	//			alert('등록한 큐(queue)가 실행되었습니다.');
+	//			$('span').dequeue();
+	//		});
+	//		$('button').addClass('action');
+	//	} else {
+	//		$('span').animate({ left : 0 });		
+	//		$('button').removeClass('action');
+	//	}
+	//});
+	
+	// 2. clearQueue
+	//$('button').click(function() {
+	//	if( !$('button').hasClass('action') ) {
+	//		$('span').animate({ left : $(window).width() - 100 });
+	//		$('span').queue(function() {
+	//			alert('등록한 큐(queue)가 실행되었습니다.');
+	//			$('span').dequeue();
+	//		});
+	//		$('button').addClass('action');
+	//	} else {
+	//		$('span').animate({ left : 0 });		
+	//		$('button').removeClass('action');
+	//	}
+	//});
+	
+	//$('button').dblclick(function() {
+	//	$('span').clearQueue();
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

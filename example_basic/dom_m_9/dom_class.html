@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+span {display:none; position:relative; top:30px; left:30px; width:200px; height:100px; background:#000}
+.addClass {display:block}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->	
+	<!-- 1. addClass
+	<span></span> -->
+	
+	<!-- 2. removeClass
+	<button>class 제거하기</button>
+	<span class="addClass"></span> -->
+	
+	<!-- 3. toggleClass
+	<button>class 토글하기</button>
+	<span></span> -->
+	
+	<!-- 4. hasClass로 토글 구현하기
+	<button>class 토글하기</button>
+	<span></span> -->
+
+<script>
+	// 1. addClass
+	//$('span').addClass('addClass');
+	//resultText( $('span').attr('class') );
+	
+	// 2. removeClass
+	//resultText( $('span').attr('class') );
+	//$('button').click(function() {
+	//	$('span').removeClass('addClass');
+	//	resultText( $('span').attr('class') );
+	//});
+	
+	// 3. toggleClass
+	//resultText( $('span').attr('class') );
+	//$('button').click(function() {
+	//	$('span').toggleClass('addClass');
+	//	resultText( $('span').attr('class') );
+	//});
+	
+	// 4. hasClass
+	//resultText( $('span').attr('class') );
+	//$('button').click(function() {
+	//	if( !$('span').hasClass('addClass') ) {
+	//		$('span').addClass('addClass');
+	//	} else {
+	//		$('span').removeClass('addClass');
+	//	}
+	//	resultText( $('span').attr('class') );
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

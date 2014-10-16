@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+* {margin:0; padding:0}
+
+.wrap label {padding-left:20px; cursor:pointer}
+.wrap label.checked {background-position:0 -15px}
+.wrap input {display:none}
+
+.check_green {background:url('check_green.png') no-repeat}
+.check_orange {background:url('check_orange.png') no-repeat}
+.radio_black {background:url('radio_black.png') no-repeat}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<button type="button">선택된 배열 테스트</button>
+	
+	<div class="wrap">
+		<input type="checkbox" class="check_test1" name="check_1" value="1">
+		<label class="check_green">이미지체크박스테스트</label>
+	</div>
+	
+	<div class="wrap">
+		<input type="checkbox" class="check_test1" name="check_2" value="2">
+		<label class="check_green">이미지체크</label>
+	</div>
+	<div class="wrap">
+		<input type="checkbox" class="check_test1" name="check_3" value="3">
+		<label class="check_green">이미지</label>
+	</div>
+
+<script>
+// 1. 판별 (최초 1회만 실행)
+$('input').each(function() {
+	var $input = $(this),
+		$label = $input.siblings();
+	
+	if( !$input.prop('checked') ) {
+		$label.removeClass('checked');
+		$input.prop('checked', false);
+	} else {
+		$label.addClass('checked');
+		$input.prop('checked', true);
+	}
+});
+
+// 2. 동작 (이벤트 발생시 수시로 실행)
+$('label').on({
+	click : function() {
+		var $label = $(this),
+			$input = $label.siblings();
+		
+		if( !$input.prop('checked') ) {
+			$label.addClass('checked');
+			$input.prop('checked', true);
+		} else {
+			$label.removeClass('checked');
+			$input.prop('checked', false);
+		}
+	}
+});
+
+$('button').on({
+	click : function() {
+		console.log( $( ":input" ).serializeArray() );
+	}
+});
+</script>
+</body>
+</html>

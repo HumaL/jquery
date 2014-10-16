@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+.wrap > div {width:50px; height:50px; border:1px solid #ccc; background:#eee}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+	
+<!-- 실습 영역 -->	
+	<div class="wrap">
+		<div>1</div>
+		<div>2</div>
+		<div class="center">3</div>
+		<div>4</div>
+		<div>5</div>
+	</div>
+
+<script>
+	// 1. get() , eq()와 비슷함.
+	//resultHtml($('.wrap div').get(2));
+	//resultHtml($('.wrap div').eq(2));
+	
+	// 2. index()
+	//resultText('해당하는 요소의 인덱스(index) : ' + $('.wrap .center').index());
+	
+	// 3. each()
+	var eachText = '';
+	$('.wrap div').each(function( index, data ) {
+		// 1. index
+		//if( index != 0 ) {
+		//	eachText += ', ' + index.toString();
+		//} else {
+		//	eachText += index.toString();
+		//}
+		 
+		// 2-1. data, 해당하는 엘리먼트를 보여준다.
+		//resultHtml( data );
+		//resultHtml( $(this) );
+		
+		// 2-2. data, 해당하는 엘리먼트의 텍스트 값을 구한다.
+		//if( index != 0 ) {
+		//	eachText += ', ' + $(data).text();
+		//} else {
+		//	eachText += $(data).text();
+		//}
+	});
+	// 1, 2-2의 텍스트 결과를 보여줄 때 eachText에 값(String)을 저장해서 호출한다.
+	//resultText( eachText );
+	
+	// 4. .length
+	//resultText( $('.wrap div').length );
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

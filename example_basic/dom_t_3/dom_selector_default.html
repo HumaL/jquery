@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+li {list-style:square}
+#target {background:pink}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->
+	<ul class="parentsUntil" style="margin-top:50px; width:200px">
+		<li>
+			<a href="javascript:;" class="first">메뉴 : 1</a>
+			<ul class="offsetParent" style="position:relative">
+				<li class="prevUntil">
+					메뉴 : 1-1
+					<ul>
+						<li><a href="javascript:;">메뉴 : 1-1-1</a></li>
+						<li>메뉴 : 1-1-2</li>
+						<li>메뉴 : 1-1-3</li>
+					</ul>
+				</li>
+				<li id="prev_target">
+					메뉴 : 1-2
+					<ul class="eq">
+						<li>메뉴 : 1-2-1</li>
+						<li class="filter">메뉴 : 1-2-2</li>
+						<li>메뉴 : 1-2-3</li>
+						<li class="has">메뉴 : 1-2-4</li>
+						<li>메뉴 : 1-2-5</li>
+						<li class="filter">메뉴 : 1-2-6</li>
+						<li>메뉴 : 1-2-7</li>
+					</ul>
+				</li>
+				<li id="target">
+					<h3>메뉴 : 1-3</h3>
+					<ul>
+						<li>메뉴 : 1-3-1</li>
+						<li class="find">메뉴 : 1-3-2</li>
+						<li>메뉴 : 1-3-3</li>
+					</ul>
+				</li>
+				<li>메뉴 : 1-4</li>
+				<li>
+					<span><img src="../../chrome.png" alt="chrome"></span>
+				</li>
+				<li>메뉴 : 1-6</li>
+				<li class="nextUntil">메뉴 : 1-7</li>
+				<li>메뉴 : 1-8</li>
+			</ul>
+		</li>
+		<li>
+			메뉴 : 2
+			<ul>
+				<li>
+					<h4>메뉴 : 2-1</h4>
+					<ul>
+						<li>메뉴 : 2-1-1</li>
+						<li>메뉴 : 2-1-2</li>
+					</ul>
+				</li>
+				<li>
+					<p>메뉴 : 2-2</p>
+					<ul>
+						<li>메뉴 : 2-2-1</li>
+						<li>메뉴 : 2-2-2</li>
+					</ul>
+				</li>
+				<li><a href="javascript:;">메뉴 : 2-3</a></li>
+			</ul>
+		</li>
+		<li class="parent" style="height:20px; border:1px solid"></li>
+		<li class="hidden" style="display:none; height:20px; background:#eee; outline:3px solid red">숨겨진 메뉴</li>
+		<li>메뉴 : 4</li>
+		<li id="last" class="parent">메뉴 : 5</li>
+	</ul>
+	<span id="img_chrome" style="display:none; position:absolute; top:5px; left:0;"><img src="../../chrome.png" alt="chrome"></span>
+	
+<script>
+	// 1. children
+	//resultSelector( $('#target').children() );
+	
+	// 2. closest
+	//resultSelector( $('#target').closest('ul') );
+	
+	// 3. find
+	//resultSelector( $('#target').find('.find') );
+	
+	// 4. next
+	//resultSelector( $('#target').next() );
+	
+	// 5. nextAll
+	//resultSelector( $('#target').nextAll() );
+	
+	// 6. nextUntil
+	//resultSelector( $('#target').nextUntil('.nextUntil') );
+	
+	// 7. offsetParent
+	//resultSelector( $('#target').offsetParent() );
+	
+	// 8. parent
+	//resultSelector( $('#target').parent() );
+	
+	// 9. parents
+	//resultSelector( $('#target').parents() );
+	
+	// 10. parentsUntil
+	//resultSelector( $('#target').parentsUntil('.parentsUntil') );
+	
+	// 11. prev
+	//resultSelector( $('#target').prev() );
+	
+	// 12. prevAll
+	//resultSelector( $('#target').prevAll() );
+	
+	// 13. prevUntil
+	//resultSelector( $('#target').prevUntil('.prevUntil') );
+	
+	// 14. siblings
+	//resultSelector( $('#target').siblings() );
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

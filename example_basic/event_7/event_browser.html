@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->	
+	<!-- 2. scroll -->
+	<span style="display:block; width:0px; height:2000px"></span>
+
+<script>
+	// 1. resize
+	$(window).resize(function() {
+		var browser_width = $(window).width();
+		var browser_height = $(window).height();
+		resultText('[브라우저] width값 : ' + browser_width + ', height값 : ' + browser_height);
+	});
+	
+	// 2. scroll
+	$(document).scroll(function() {
+		resultText('[브라우저] scroll 높이값 : ' + $(document).scrollTop());
+	});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

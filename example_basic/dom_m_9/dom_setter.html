@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>	
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->	
+
+<!-- 실습 영역 -->	
+	<!-- 1. attr_setter
+	<span id="아이디_최초" class="클래스_최초" style="display:block; position:relative; top:30px; left:30px; width:200px; height:100px; background:#000"></span> -->
+	
+	<!-- 2. attr_setter + prop_setter
+	<input type="radio"> -->
+	
+	<!-- 3. css_setter
+	<span style="display:block; position:relative; top:30px; left:30px; width:200px; height:100px; background:#000"></span> -->
+	
+	<!-- 4. width & height_setter
+	<span style="display:block; position:relative; top:30px; left:30px; width:200px; height:100px; background:#000"></span -->
+	
+	<!-- 5. offset_setter
+	<span id="outer" style="display:inline-block; position:relative; top:30px; left:30px; width:200px; height:100px; background:#eee">
+		<span id="inner" style="display:block; position:absolute; top:30px; left:30px; width:100%; height:100%; background:#000"></span>
+	</span> -->
+	
+	<!-- 6. scrollTop_setter
+	<button style="position:fixed; top:20px; left:20px">scrollTop 정보확인</button>
+	<span style="display:block; width:200px; height:2000px; background:#000"></span> -->
+	
+	<!-- 7. scrollLeft_setter
+	<button style="position:fixed; top:20px; left:20px">scrollLeft 정보확인</button>
+	<span style="display:block; width:2000px; height:200px; background:#000"></span> -->
+
+<script>
+	// 1. attr_setter
+	//$('span').attr('id', '아이디_수정');
+	
+	//resultText( $('span').attr('id') );
+	//resultText( $('span').attr('class') );
+	//resultText( $('span').attr('style') );
+	
+	// 2. attr_setter + prop_setter
+	//$('input').attr('checked', 'checked');
+	//$('input').prop('checked', 'checked');
+	
+	//resultText( $('input').attr('checked') );
+	//resultText( $('input').prop('checked') );
+	
+	// 3. css_setter
+	//$('span').css('width', 500)
+	//$('span').css({ height : 500 });
+	
+	//resultText( $('span').css('display') );
+	//resultText( $('span').css('width') );
+	//resultText( $('span').css('height') );
+	
+	// 4. width & height_setter
+	//$('span').width('500px');
+	//$('span').height(500);
+	
+	//resultText( $('span').width() );
+	//resultText( parseInt( $('span').css('width') ) );
+	//resultText( $('span').height() );
+	//resultText( parseInt( $('span').css('height') ) );
+	
+	// 5. offset_setter
+	//$('#outer').offset({ top : 100, left : 100 });
+	
+	//resultText( $('#outer').offset().top );
+	//resultText( $('#outer').offset().left );
+	//resultText( $('#inner').offset().top );
+	//resultText( $('#inner').offset().left );
+	
+	// 6. scrollTop_setter
+	//setTimeout(function() {
+	//	$(document).scrollTop(300);
+	//}, 0);
+	
+	//$('button').on({
+	//	click : function() {
+	//		resultText( $(document).scrollTop() );
+	//	}
+	//});
+	
+	// 7. scrollLeft_setter
+	//setTimeout(function() {
+	//	$(document).scrollLeft(300);
+	//}, 0);
+	
+	//$('button').on({
+	//	click : function() {
+	//		resultText( $(document).scrollLeft() );
+	//	}
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

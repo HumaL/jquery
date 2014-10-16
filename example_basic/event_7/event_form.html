@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+form > * {display:block; margin:10px}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->	
+	<form action="#" method="get/post">
+		<a href="javascript:;">링크</a>
+		<input type="text">
+		<button type="button" id="add_focus">&lt;input&gt; 태그에 강제로 포커싱 하기.</button>
+		<button type="button" id="remove_focus">&lt;input&gt; 태그에 강제로 포커싱 빼기.</button>
+		<textarea cols="20" rows="10"></textarea>
+		<select>
+			<option value="사과">사과</option>
+			<option value="배" selected>배</option>
+			<option value="멜론">멜론</option>
+		</select>
+		<button type="submit" id="transmit_submit">폼 전송</button>
+	</form>
+
+<script>
+	// 1. focus & blur
+	$('a, input, textarea, select').focus(function() {
+		resultText('포커스가 해당 요소(a, input, textarea, select)에 표시되어 있습니다.');
+	}).blur(function() {
+		resultText('포커스가 빠져나갔습니다.');
+	});
+
+	// 2. 강제 focus
+	$('#add_focus').click(function() {
+		$('input').focus();
+	});
+	
+	// 3. 강제 blur
+	$('#remove_focus').click(function() {
+		$('input').blur();
+	});
+	
+	// 4. change
+	resultValue( $('select option:selected') );
+	$('select').change(function() {
+		resultValue( $('select option:selected') );
+	});
+	
+	// 5. select
+	$('input, textarea').select(function() {
+		resultText('해당 요소(input, textarea)에서 텍스트가 선택되었습니다.');
+	});
+	
+	// 6. submit
+	$('#transmit_submit').click(function() {
+		alert('폼 내용을 전송했습니다');
+	});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

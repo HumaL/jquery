@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+.red {background:red !important}
+.orange {background:orange !important}
+.yellow {background:yellow !important}
+.green {background:green !important}
+.blue {background:blue !important}
+.purple {background:purple !important}
+.white {background:white !important}
+
+.wrap > div {width:50px; height:50px; border:1px solid #ccc; background:#000}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->	
+	<div class="wrap">
+		<div class="center"></div>
+	</div>
+
+<script>
+	// 1. prepend & append
+	//$('.wrap').prepend('<div class="red"/>');
+	//$('.wrap').append('<div class="orange"/>');
+	
+	// 2. prependTo & appendTo
+	//$('<div class="yellow"/>').prependTo('.wrap');
+	//$('<div class="green"/>').appendTo('.wrap');
+	
+	var $first_wrap_div = $('.wrap > div').eq(0);
+	var $last_wrap_div = $('.wrap > div').eq(-1);
+	
+	// 3. before & after
+	//$first_wrap_div.before('<div class="blue"/>');
+	//$last_wrap_div.after('<div class="purple"/>');
+	
+	// 4. insertBefore & insertAfter
+	//$('<div class="white"/>').insertBefore('.wrap .center');
+	//$('<div class="white"/>').insertAfter('.wrap .center');
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

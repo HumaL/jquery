@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+<style>
+img {display:block}
+</style>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+	
+<!-- 실습 영역 -->	
+	<!-- 1. fadeIn
+	<img src="../../chrome.png" alt="chrome" style="display:none"> -->
+	
+	<!-- 2. fadeOut
+	<img src="../../chrome.png" alt="chrome"> -->
+	
+	<!-- 3-1 ~ 3-4. fadeToggle
+	<button type="button">.fadeToggle() 메서드 테스트하기</button>
+	<img src="../../chrome.png" alt="chrome"> -->
+	
+	<!-- 3-5-1. fadeToggle_advanced_fadeIn
+	<img src="../../chrome.png" alt="chrome" style="display:none"> -->
+	
+	<!-- 3-5-2. fadeToggle_advanced_fadeOut
+	<img src="../../chrome.png" alt="chrome"> -->
+	
+	<!-- 3-6. fadeTo
+	<img src="../../chrome.png" alt="chrome"> -->
+	
+<script>
+	// 1-1. fadeIn_no arguments
+	//$('img').fadeIn();
+	
+	// 1-2. fadeIn_duration
+	//$('img').fadeIn(2500);
+	
+	// 1-3. fadeIn_duration, callback
+	//$('img').fadeIn(2500, function() {
+	//	resultText('.fadeIn 완료되었습니다.');
+	//});
+	
+	// 2-1. fadeOut_no arguments
+	//$('img').fadeOut();
+	
+	// 2-2. fadeOut_duration
+	//$('img').fadeOut(2500);
+	
+	// 2-3. fadeOut_duration, callback
+	//$('img').fadeOut(2500, function() {
+	//	resultText('.fadeOut 완료되었습니다.');
+	//});
+	
+	// 3-1. fadeToggle_no arguments
+	//$('button').click(function() {
+	//	$('img').fadeToggle();
+	//});
+	
+	// 3-2. fadeToggle_duration
+	//$('button').click(function() {
+	//	$('img').fadeToggle(2500);
+	//});
+	
+	// 3-3. fadeToggle_duration, callback
+	//$('button').click(function() {
+	//	$('img').fadeToggle(2500, function() {
+	//		resultText('.fadeToggle 완료되었습니다.');
+	//	});
+	//});
+	
+	// 3-4. slideToggle_advanced_duration, callback
+	//$('button').click(function() {
+	//	// 현재 상태를 보이는 상태(:visible)와 보이지 않는 상태(:hidden)로 구분합니다.
+	//	var status = $('img').is(':visible');
+	//
+	//	$('img').fadeToggle(2500, function() {
+	//		if( status ) {
+	//			resultText('.fadeToggle .fadeOut상태로 완료되었습니다.');
+	//		} else {
+	//			resultText('.fadeToggle .fadeIn상태로 완료되었습니다.');
+	//		}
+	//		
+	//	});
+	//});
+	
+	// 3-5-1. fadeToggle_advanced_fadeIn
+	//$('img').fadeToggle(true);
+	
+	// 3-5-2. fadeToggle_advanced_fadeOut
+	//$('img').fadeToggle(false);
+	
+	// 3-6. fadeTo_duration, opacity, callback
+	//$('img').fadeTo(2500, '0.5', function() {
+	//	resultText('.fadeTo(opacity 0.5) 완료되었습니다.');
+	//});
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>

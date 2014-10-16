@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+.wrap div {position:relative; width:50px; height:50px; outline:1px solid #eee}
+
+.div_outer > div {background:red}
+.div_outer > div:first-child {background:green}
+.div_inner {background:purple}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../../result.js"></script>
+</head>
+<body>
+<!-- 결과 영역 -->
+<div class="result">
+	<p class="title">결과값 확인</p>
+	<p class="description"></p>
+</div>
+<div class="result_html"></div>	
+<!-- //결과 영역 -->
+
+<!-- 실습 영역 -->
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+<script>
+	// dom_wrap method
+	//$('.wrap > div').wrapAll('<div class="div_outer"/>');
+	//$('.wrap > div').wrap('<div class="div_outer"/>');
+	//$('.wrap > div').wrapInner('<div class="div_inner"/>');
+</script>
+<!-- //실습 영역 -->
+</body>
+</html>
